@@ -1,0 +1,41 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: studio-ingress-https
+  labels:
+    lechaterrant.com/app: studio
+    lechaterrant.com/stack: backend
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`studio.lechaterrant.com`)
+      services:
+        - name: studio-service
+          port: 8000
+      middlewares:
+        - name: admin-auth
+  tls:
+    secretName: tls-secret
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: studio-ingress-http
+  labels:
+    lechaterrant.com/app: studio
+    lechaterrant.com/stack: backend
+spec:
+  entryPoints:
+    - web
+  routes:
+    - kind: Rule
+      match: Host(`studio.lechaterrant.com`)
+      services:
+        - name: studio-service
+          port: 8000
+      middlewares:
+        - name: https-redirect
