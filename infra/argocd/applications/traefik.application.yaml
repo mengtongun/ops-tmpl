@@ -7,7 +7,7 @@ metadata:
 spec:
   project: infra
   source:
-    repoURL: https://github.com/LeChatErrant/ops-template
+    repoURL: https://github.com/mengtongun/ops-tmpl
     targetRevision: master
     path: infra/traefik
     directory:

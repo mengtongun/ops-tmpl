@@ -7,7 +7,7 @@ metadata:
 spec:
   project: products
   source:
-    repoURL: https://github.com/LeChatErrant/ops-template
+    repoURL: https://github.com/mengtongun/ops-tmpl
     targetRevision: master
     path: deployment/backend/studio
   destination:

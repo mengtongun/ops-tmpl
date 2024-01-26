@@ -8,7 +8,7 @@ It emphasizes on **reproducibility** by describing all the **infrastructure as c
 
 &nbsp;
 
-**[ops-template](https://github.com/LeChatErrant/ops-template)** is fully integrated with
+**[ops-template](https://github.com/mengtongun/ops-tmpl)** is fully integrated with
 - **[API-template](https://github.com/LeChatErrant/API-template)**, a modern typescript backend stack
 - **[front-template](https://github.com/LeChatErrant/front-template)**, a modern typescript frontend stack
 
@@ -129,7 +129,7 @@ With it, you don't need to do manual actions on a cloud provider dashboard, redu
 &nbsp;
 &nbsp;
 
-4. Add your organization and your workspace into the **[infra/terraform/cloud.tf](https://github.com/LeChatErrant/ops-template/blob/master/infra/terraform/cloud.tf)** to use terraform cloud as remote backend
+4. Add your organization and your workspace into the **[infra/terraform/cloud.tf](https://github.com/mengtongun/ops-tmpl/blob/master/infra/terraform/cloud.tf)** to use terraform cloud as remote backend
 
 5. Start a new plan on terraform cloud UI
 
@@ -169,7 +169,7 @@ The only thing we deploy by hand is argoCD, which will then deploy every apps pr
 
 # How to contribute
 
-1. Fork it (**<https://github.com/LeChatErrant/ops-template/fork>**)
+1. Fork it (**<https://github.com/mengtongun/ops-tmpl/fork>**)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
