@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: studio-deployment
+  labels:
+    lechaterrant.com/app: studio
+    lechaterrant.com/stack: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      lechaterrant.com/app: studio
+  template:
+    metadata:
+      labels:
+        lechaterrant.com/app: studio
+        lechaterrant.com/stack: backend
+    spec:
+      restartPolicy: Always
+      imagePullSecrets:
+        - name: registry-key
+      containers:
+      - name: studio
+        image: ghcr.io/lechaterrant/api-template:1.1.3
+        args:
+          - db:studio
+        envFrom:
+        - configMapRef:
+            name: studio-configmap
+        - secretRef:
+            name: studio-secret

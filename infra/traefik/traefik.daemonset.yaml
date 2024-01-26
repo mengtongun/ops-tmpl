@@ -1,0 +1,37 @@
+---
+kind: DaemonSet
+apiVersion: apps/v1
+metadata:
+  name: traefik-ingress-controller
+  labels:
+    lechaterrant.com/app: traefik
+    lechaterrant.com/stack: traefik
+  annotations:
+    lechaterrant.com/load-balancer: traefik
+spec:
+  selector:
+    matchLabels:
+      lechaterrant.com/app: traefik
+  template:
+    metadata:
+      name: traefik-ingress-lb
+      labels:
+        lechaterrant.com/app: traefik
+        lechaterrant.com/stack: traefik
+    spec:
+      serviceAccountName: traefik-ingress-controller
+      terminationGracePeriodSeconds: 60
+      restartPolicy: Always
+      containers:
+      - image: traefik:v2.2
+        name: traefik-ingress-lb
+        ports:
+        - name: http
+          containerPort: 80
+        - name: https
+          containerPort: 443
+        args:
+        - --providers.kubernetescrd
+        - --entrypoints.web.address=:80
+        - --entrypoints.websecure.address=:443
+        - --api

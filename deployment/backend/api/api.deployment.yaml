@@ -1,0 +1,38 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+  labels:
+    lechaterrant.com/app: api
+    lechaterrant.com/stack: backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      lechaterrant.com/app: api
+  template:
+    metadata:
+      labels:
+        lechaterrant.com/app: api
+        lechaterrant.com/stack: backend
+    spec:
+      restartPolicy: Always
+      imagePullSecrets:
+        - name: registry-key
+      containers:
+      - name: api
+        # 'latest' tag should be avoided, prefer using release tags or specific version
+        image: ghcr.io/lechaterrant/api-template:1.1.3
+        # Readiness probe, unlike expected, keep running even when the pod is ready
+        # As it is eating resources and polluting logs, we disabled it
+#        readinessProbe:
+#          httpGet:
+#            port: 8000
+#            path: /ping
+#          periodSeconds: 3
+        envFrom:
+        - configMapRef:
+            name: api-configmap
+        - secretRef:
+            name: api-secret
