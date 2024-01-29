@@ -4,11 +4,11 @@ kind: ConfigMap
 metadata:
   name: api-configmap
   labels:
-    lechaterrant.com/app: api
-    lechaterrant.com/stack: backend
+    mengtongun.com/app: api
+    mengtongun.com/stack: backend
 data:
   MODE: dev
   PORT: "8000"
   REDIS_HOST: redis-service
   REDIS_PORT: "6379"
-  WHITELIST: frontend.lechaterrant.com
+  WHITELIST: frontend.mengtongun.com
