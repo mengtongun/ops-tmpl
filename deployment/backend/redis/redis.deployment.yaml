@@ -1,20 +1,20 @@
-mengtongun.commengtongun.com---
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: redis-deployment
   labels:
-    lechaterrant.com/app: redis
-    lechaterrant.com/stack: backend
+    mengtongun.com/app: redis
+    mengtongun.com/stack: backend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      lechaterrant.com/app: redis
+      mengtongun.com/app: redis
   template:
     metadata:
       labels:
-        lechaterrant.com/app: redis
+        mengtongun.com/app: redis
     spec:
       restartPolicy: Always
       containers:

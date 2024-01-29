@@ -1,15 +1,15 @@
-mengtongun.commengtongun.com---
+---
 apiVersion: v1
 kind: Service
 metadata:
   name: postgres-service
   labels:
-    lechaterrant.com/app: postgres
-    lechaterrant.com/stack: backend
+    mengtongun.com/app: postgres
+    mengtongun.com/stack: backend
 spec:
   type: ClusterIP
   selector:
-    lechaterrant.com/app: postgres
+    mengtongun.com/app: postgres
   ports:
     - port: 5432
       targetPort: 5432

@@ -1,15 +1,15 @@
-mengtongun.commengtongun.com---
+---
 apiVersion: v1
 kind: Service
 metadata:
   name: redis-service
   labels:
-    lechaterrant.com/app: redis
-    lechaterrant.com/stack: backend
+    mengtongun.com/app: redis
+    mengtongun.com/stack: backend
 spec:
   type: ClusterIP
   selector:
-    lechaterrant.com/app: redis
+    mengtongun.com/app: redis
   ports:
     - name: redis
       protocol: TCP

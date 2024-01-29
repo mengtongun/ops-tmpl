@@ -1,12 +1,12 @@
-mengtongun.commengtongun.com---
+---
 apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
   name: https-redirect
   namespace: default
   labels:
-    lechaterrant.com/app: traefik
-    lechaterrant.com/stack: traefik
+    mengtongun.com/app: traefik
+    mengtongun.com/stack: traefik
 spec:
   redirectScheme:
     scheme: https

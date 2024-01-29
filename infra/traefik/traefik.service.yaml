@@ -1,17 +1,17 @@
-mengtongun.commengtongun.com---
+---
 kind: Service
 apiVersion: v1
 metadata:
   name: traefik-ingress-service
   labels:
-    lechaterrant.com/app: traefik
-    lechaterrant.com/stack: traefik
+    mengtongun.com/app: traefik
+    mengtongun.com/stack: traefik
   annotations:
-    lechaterrant.com/load-balancer: traefik
+    mengtongun.com/load-balancer: traefik
 spec:
   type: NodePort
   selector:
-    lechaterrant.com/app: traefik
+    mengtongun.com/app: traefik
   ports:
     - protocol: TCP
       port: 80

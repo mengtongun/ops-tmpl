@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "LeChatErrant"
+    organization = "mengtongun"
 
     workspaces {
       name = "ops-template"

@@ -1,23 +1,23 @@
-mengtongun.commengtongun.com---
+---
 kind: DaemonSet
 apiVersion: apps/v1
 metadata:
   name: traefik-ingress-controller
   labels:
-    lechaterrant.com/app: traefik
-    lechaterrant.com/stack: traefik
+    mengtongun.com/app: traefik
+    mengtongun.com/stack: traefik
   annotations:
-    lechaterrant.com/load-balancer: traefik
+    mengtongun.com/load-balancer: traefik
 spec:
   selector:
     matchLabels:
-      lechaterrant.com/app: traefik
+      mengtongun.com/app: traefik
   template:
     metadata:
       name: traefik-ingress-lb
       labels:
-        lechaterrant.com/app: traefik
-        lechaterrant.com/stack: traefik
+        mengtongun.com/app: traefik
+        mengtongun.com/stack: traefik
     spec:
       serviceAccountName: traefik-ingress-controller
       terminationGracePeriodSeconds: 60

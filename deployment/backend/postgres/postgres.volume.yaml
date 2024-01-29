@@ -1,11 +1,11 @@
-mengtongun.commengtongun.com---
+---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: postgres-pv-claim
   labels:
-    lechaterrant.com/app: postgres
-    lechaterrant.com/stack: backend
+    mengtongun.com/app: postgres
+    mengtongun.com/stack: backend
 spec:
   accessModes:
     - ReadWriteOnce
@@ -22,8 +22,8 @@ spec:
 # metadata:
 #   name: postgres-pv
 #   labels:
-#     lechaterrant.com/app: postgres
-#     lechaterrant.com/stack: backend
+#     mengtongun.com/app: postgres
+#     mengtongun.com/stack: backend
 # spec:
 #   capacity:
 #     storage: 1Gi

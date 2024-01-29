@@ -9,10 +9,10 @@ It emphasizes on **reproducibility** by describing all the **infrastructure as c
 &nbsp;
 
 **[ops-template](https://github.com/mengtongun/ops-tmpl)** is fully integrated with
-- **[API-template](https://github.com/LeChatErrant/API-template)**, a modern typescript backend stack
-- **[front-template](https://github.com/LeChatErrant/front-template)**, a modern typescript frontend stack
+- **[API-template](https://github.com/mengtongun/API-template)**, a modern typescript backend stack
+- **[front-template](https://github.com/mengtongun/front-template)**, a modern typescript frontend stack
 
-> Don't hesitate to share your improvements or to give feedback on Discord **(LeChatErrant#6074)** :wink:
+> Don't hesitate to share your improvements or to give feedback on Discord **(mengtongun#6074)** :wink:
 
 &nbsp;
 
@@ -60,8 +60,8 @@ It emphasizes on **reproducibility** by describing all the **infrastructure as c
 ## Deployment
 
 - **[Cert manager](https://cert-manager.io/)** : SSL certificates management
-- **[API template](https://github.com/LeChatErrant/API-template)** : Backend
-- **[Front template](https://github.com/LeChatErrant/front-template)** : Frontend
+- **[API template](https://github.com/mengtongun/API-template)** : Backend
+- **[Front template](https://github.com/mengtongun/front-template)** : Frontend
 - **[Redis](https://redis.io/)** : Data caching
 - **[PostgreSQL](https://www.postgresql.org/)** : Database
 
@@ -179,4 +179,4 @@ Issues and comments welcomed ! :wink:
 
 ## Contributors
 
-![GitHub Logo](https://github.com/LeChatErrant.png?size=30) &nbsp; **[LeChatErrant](https://github.com/LeChatErrant)** - creator and maintainer
+![GitHub Logo](https://github.com/mengtongun.png?size=30) &nbsp; **[mengtongun](https://github.com/mengtongun)** - creator and maintainer

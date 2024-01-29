@@ -1,10 +1,10 @@
-mengtongun.commengtongun.com---
+---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: studio-configmap
   labels:
-    lechaterrant.com/app: studio
-    lechaterrant.com/stack: backend
+    mengtongun.com/app: studio
+    mengtongun.com/stack: backend
 data:
   STUDIO_PORT: "8000"

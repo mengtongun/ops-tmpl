@@ -1,17 +1,17 @@
-mengtongun.commengtongun.com---
+---
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
   name: api-ingress-https
   labels:
-    lechaterrant.com/app: api
-    lechaterrant.com/stack: backend
+    mengtongun.com/app: api
+    mengtongun.com/stack: backend
 spec:
   entryPoints:
     - websecure
   routes:
   - kind: Rule
-    match: Host(`api.lechaterrant.com`)
+    match: Host(`api.mengtongun.com`)
     services:
     - name: api-service
       port: 8000
@@ -24,14 +24,14 @@ kind: IngressRoute
 metadata:
   name: api-ingress-http
   labels:
-    lechaterrant.com/app: api
-    lechaterrant.com/stack: backend
+    mengtongun.com/app: api
+    mengtongun.com/stack: backend
 spec:
   entryPoints:
     - web
   routes:
     - kind: Rule
-      match: Host(`api.lechaterrant.com`) && PathPrefix(`/insecure`)
+      match: Host(`api.mengtongun.com`) && PathPrefix(`/insecure`)
       services:
         - name: api-service
           port: 8000
@@ -44,8 +44,8 @@ kind: Middleware
 metadata:
   name: strip-api-prefix
   labels:
-    lechaterrant.com/app: api
-    lechaterrant.com/stack: backend
+    mengtongun.com/app: api
+    mengtongun.com/stack: backend
 spec:
   stripPrefix:
     prefixes:
