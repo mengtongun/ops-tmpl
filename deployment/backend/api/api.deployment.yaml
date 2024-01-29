@@ -4,18 +4,18 @@ kind: Deployment
 metadata:
   name: api-deployment
   labels:
-    lechaterrant.com/app: api
-    lechaterrant.com/stack: backend
+    mengtongun.com/app: api
+    mengtongun.com/stack: backend
 spec:
   replicas: 3
   selector:
     matchLabels:
-      lechaterrant.com/app: api
+      mengtongun.com/app: api
   template:
     metadata:
       labels:
-        lechaterrant.com/app: api
-        lechaterrant.com/stack: backend
+        mengtongun.com/app: api
+        mengtongun.com/stack: backend
     spec:
       restartPolicy: Always
       imagePullSecrets:

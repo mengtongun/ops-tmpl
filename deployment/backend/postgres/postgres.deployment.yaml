@@ -1,4 +1,4 @@
-mengtongun.comapiVersion: apps/v1
+mengtongun.commengtongun.comapiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgres-deployment
