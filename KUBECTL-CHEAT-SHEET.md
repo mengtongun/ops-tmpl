@@ -238,7 +238,7 @@ k get nodes -o jsonpath='{ $.items[*].status.addresses[?(@.type=="InternalIP")].
 
 ### Metrics
 
-If you have metrics-server installed on your cluster (example in [02_monitoring/](https://github.com/mengtongun/ops/tree/master/02_monitoring)), you can retrieve pods / nodes metrics
+If you have metrics-server installed on your cluster (example in [02_monitoring/](https://github.com/LeChatErrant/ops/tree/master/02_monitoring)), you can retrieve pods / nodes metrics
 
 All nodes metrics
 
@@ -266,4 +266,4 @@ k top pods my-pod --containers
 
 ### Contributors
 
-![GitHub Logo](https://github.com/mengtongun.png?size=30) &nbsp; [mengtongun](https://github.com/mengtongun) - creator and maintainer
+![GitHub Logo](https://github.com/LeChatErrant.png?size=30) &nbsp; [LeChatErrant](https://github.com/LeChatErrant) - creator and maintainer
